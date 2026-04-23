@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KWEIDER - Arabic Sweets Catalog</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KWEIDER LIMITED - Wholesale Price List">
+    <meta property="og:description" content="تصفح قائمة أسعار الجملة للحلويات العربية الفاخرة من كوييدر.">
+    <meta property="og:image" content="https://abdulkw2026.github.io/Wholesale-Price-List-Catalogue/bakalwa1kg.jpeg">
+    <meta property="og:url" content="https://abdulkw2026.github.io/Wholesale-Price-List-Catalogue/">
     <style>
         /* الألوان المعتمدة: ذهبي نحاسي وبني داكن كلاسيكي */
         :root {
-            --copper-gold: #b87333; /* ذهبي نحاسي */
-            --dark-brown: #3b2514; /* بني داكن للنصوص */
-            --light-bg: #f8f5f0; /* خلفية محيطية هادئة */
-            --pure-white: #ffffff; /* خلفية المنتجات لدمج الـ PNG/JPEG */
+            --copper-gold: #b87333; 
+            --dark-brown: #3b2514; 
+            --light-bg: #f8f5f0; 
+            --pure-white: #ffffff; 
         }
 
         body {
@@ -24,17 +30,16 @@
         .page-container {
             max-width: 210mm;
             margin: 0 auto;
-            background-color: var(--pure-white); /* خلفية بيضاء نقية لمنع ظهور حواف الصور */
+            background-color: var(--pure-white);
             border: 1px solid var(--copper-gold);
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         
-        /* الترويسة - تم تعديلها لتستقبل صورة الشعار */
         .header {
             text-align: center;
             margin-bottom: 30px;
-            height: 90px; /* تحديد ارتفاع ثابت لمنطقة الشعار */
+            height: 90px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -43,16 +48,9 @@
         .logo-image {
             max-height: 100%;
             width: auto;
-            object-fit: contain; /* لمنع تشوه الشعار */
-        }
-        .logo-placeholder-text {
-            font-size: 9pt;
-            color: #ccc;
-            font-style: italic;
-            margin-top: 5px;
+            object-fit: contain;
         }
         
-        /* شريط التصنيف */
         .category-header {
             background-color: var(--copper-gold);
             color: var(--pure-white);
@@ -64,7 +62,6 @@
             margin-bottom: 40px;
         }
 
-        /* قائمة المنتجات */
         .product-list {
             display: flex;
             flex-direction: column;
@@ -81,7 +78,6 @@
             border-bottom: none;
         }
 
-        /* معلومات المنتج */
         .info-column {
             width: 60%;
             display: flex;
@@ -116,30 +112,24 @@
             color: var(--copper-gold);
         }
 
-        /* صورة المنتج المصغرة - تم توحيد القياسات بالكامل */
         .image-column {
-            width: 150px; /* تثبيت عرض الحاوية */
-            height: 150px; /* تثبيت طول الحاوية */
+            width: 150px; 
+            height: 150px; 
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: right;
-            background-color: transparent; 
         }
         .product-image {
-            width: 140px; /* عرض ثابت للصورة */
-            height: 140px; /* طول ثابت للصورة */
-            object-fit: contain; /* السر هنا: عرض الصورة بالكامل ضمن المساحة المحددة دون تشوه أو قص */
+            width: 140px; 
+            height: 140px; 
+            object-fit: contain; 
             cursor: pointer;
             transition: transform 0.3s ease;
-            background-color: transparent;
-            border: none; 
         }
         .product-image:hover {
             transform: scale(1.08);
         }
 
-        /* التذييل */
         .footer {
             margin-top: 40px;
             text-align: center;
@@ -149,37 +139,22 @@
             padding-top: 20px;
         }
 
-        /* نافذة التكبير المنبثقة (Modal) */
         .modal {
             display: none; 
             position: fixed; 
             z-index: 1000; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
+            left: 0; top: 0; width: 100%; height: 100%; 
             background-color: rgba(59, 37, 20, 0.9); 
-            justify-content: center;
-            align-items: center;
+            justify-content: center; align-items: center;
         }
         .modal-content {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 90%; max-height: 90%;
             border: 2px solid var(--copper-gold);
-            box-shadow: 0 0 30px rgba(184, 115, 51, 0.4);
             background-color: var(--pure-white); 
         }
         .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: var(--copper-gold);
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close-btn:hover {
-            color: var(--pure-white);
+            position: absolute; top: 20px; right: 30px;
+            color: var(--copper-gold); font-size: 40px; cursor: pointer;
         }
     </style>
 </head>
@@ -187,8 +162,7 @@
 
     <div class="page-container">
         <div class="header">
-            <img src="imageslogo.png" alt="Kweider Logo" class="logo-image">
-            <div class="logo-placeholder-text">Logo Area (logo.png)</div>
+            <img src="logo.png" alt="Kweider Logo" class="logo-image">
         </div>
 
         <div class="category-header">
@@ -196,127 +170,60 @@
         </div>
 
         <div class="product-list">
-            
             <div class="product-item">
                 <div class="info-column">
                     <div class="info-group full-width">
                         <span class="product-label">Product Name</span>
                         <div class="product-value product-name">Premium Pistachio Baklawa</div>
                     </div>
-                    <div class="info-group">
-                        <span class="product-label">Weight</span>
-                        <div class="product-value">1 kg</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Units per Box</span>
-                        <div class="product-value">12 Units</div>
-                    </div>
-                    <div class="info-group full-width">
-                        <span class="product-label">Price</span>
-                        <div class="price-tag">£ 25.00</div>
-                    </div>
+                    <div class="info-group"><span class="product-label">Weight</span><div class="product-value">1 kg</div></div>
+                    <div class="info-group"><span class="product-label">Units per Box</span><div class="product-value">12 Units</div></div>
+                    <div class="info-group full-width"><span class="product-label">Price</span><div class="price-tag">£ 25.00</div></div>
                 </div>
                 <div class="image-column">
-                    <img src="bakalwa1kg.png" alt="Premium Pistachio Baklawa" class="product-image" onclick="openModal(this.src)">
+                    <img src="bakalwa1kg.jpeg" alt="Premium Pistachio Baklawa" class="product-image" onclick="openModal(this.src)">
                 </div>
             </div>
 
             <div class="product-item">
                 <div class="info-column">
-                    <div class="info-group full-width">
-                        <span class="product-label">Product Name</span>
-                        <div class="product-value product-name">Premium Cashew Baklawa</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Weight</span>
-                        <div class="product-value">500 g</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Units per Box</span>
-                        <div class="product-value">12 Units</div>
-                    </div>
-                    <div class="info-group full-width">
-                        <span class="product-label">Price</span>
-                        <div class="price-tag">£ 13.00</div>
-                    </div>
+                    <div class="info-group full-width"><span class="product-label">Product Name</span><div class="product-value product-name">Premium Cashew Baklawa</div></div>
+                    <div class="info-group"><span class="product-label">Weight</span><div class="product-value">500 g</div></div>
+                    <div class="info-group"><span class="product-label">Units per Box</span><div class="product-value">12 Units</div></div>
+                    <div class="info-group full-width"><span class="product-label">Price</span><div class="price-tag">£ 22.00</div></div>
                 </div>
-                <div class="image-column">
-                    <img src="bakalwa500g.png" alt="Premium Cashew Baklawa" class="product-image" onclick="openModal(this.src)">
-                </div>
+                <div class="image-column"><img src="bakalwa500g.jpeg" alt="Product" class="product-image" onclick="openModal(this.src)"></div>
             </div>
 
             <div class="product-item">
                 <div class="info-column">
-                    <div class="info-group full-width">
-                        <span class="product-label">Product Name</span>
-                        <div class="product-value product-name">Premium Walnut Baklawa</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Weight</span>
-                        <div class="product-value">300 g</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Units per Box</span>
-                        <div class="product-value">12 Units</div>
-                    </div>
-                    <div class="info-group full-width">
-                        <span class="product-label">Price</span>
-                        <div class="price-tag">£ 8.00</div>
-                    </div>
+                    <div class="info-group full-width"><span class="product-label">Product Name</span><div class="product-value product-name">Premium Walnut Baklawa</div></div>
+                    <div class="info-group"><span class="product-label">Weight</span><div class="product-value">300 g</div></div>
+                    <div class="info-group"><span class="product-label">Units per Box</span><div class="product-value">12 Units</div></div>
+                    <div class="info-group full-width"><span class="product-label">Price</span><div class="price-tag">£ 23.00</div></div>
                 </div>
-                <div class="image-column">
-                    <img src="bakalwa300g.png" alt="Premium Walnut Baklawa" class="product-image" onclick="openModal(this.src)">
-                </div>
+                <div class="image-column"><img src="bakalwa300g.jpeg" alt="Product" class="product-image" onclick="openModal(this.src)"></div>
             </div>
 
             <div class="product-item">
                 <div class="info-column">
-                    <div class="info-group full-width">
-                        <span class="product-label">Product Name</span>
-                        <div class="product-value product-name">Premium Almond Mabrouma</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Weight</span>
-                        <div class="product-value">100 g</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Units per Box</span>
-                        <div class="product-value">20 Units</div>
-                    </div>
-                    <div class="info-group full-width">
-                        <span class="product-label">Price</span>
-                        <div class="price-tag">£ 3.00</div>
-                    </div>
+                    <div class="info-group full-width"><span class="product-label">Product Name</span><div class="product-value product-name">Premium Almond Mabrouma</div></div>
+                    <div class="info-group"><span class="product-label">Weight</span><div class="product-value">100 g</div></div>
+                    <div class="info-group"><span class="product-label">Units per Box</span><div class="product-value">10 Units</div></div>
+                    <div class="info-group full-width"><span class="product-label">Price</span><div class="price-tag">£ 28.00</div></div>
                 </div>
-                <div class="image-column">
-                    <img src="bakalwa100g.png" alt="Premium Almond Mabrouma" class="product-image" onclick="openModal(this.src)">
-                </div>
+                <div class="image-column"><img src="bakalwa100g.jpeg" alt="Product" class="product-image" onclick="openModal(this.src)"></div>
             </div>
 
             <div class="product-item">
                 <div class="info-column">
-                    <div class="info-group full-width">
-                        <span class="product-label">Product Name</span>
-                        <div class="product-value product-name">Premium Pistachio Osh El Bulbul</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Weight</span>
-                        <div class="product-value">1.250 kg</div>
-                    </div>
-                    <div class="info-group">
-                        <span class="product-label">Units per Box</span>
-                        <div class="product-value">10 Units</div>
-                    </div>
-                    <div class="info-group full-width">
-                        <span class="product-label">Price</span>
-                        <div class="price-tag">£ 30.00</div>
-                    </div>
+                    <div class="info-group full-width"><span class="product-label">Product Name</span><div class="product-value product-name">Premium Pistachio Osh El Bulbul</div></div>
+                    <div class="info-group"><span class="product-label">Weight</span><div class="product-value">1.250 kg</div></div>
+                    <div class="info-group"><span class="product-label">Units per Box</span><div class="product-value">15 Units</div></div>
+                    <div class="info-group full-width"><span class="product-label">Price</span><div class="price-tag">£ 30.00</div></div>
                 </div>
-                <div class="image-column">
-                    <img src="bakalwa1250 g.jpeg" alt="Premium Pistachio Osh El Bulbul" class="product-image" onclick="openModal(this.src)">
-                </div>
+                <div class="image-column"><img src="bakalwa1250 g.jpeg" alt="Product" class="product-image" onclick="openModal(this.src)"></div>
             </div>
-
         </div> 
 
         <div class="footer">
@@ -337,7 +244,6 @@
             modal.style.display = "flex"; 
             modalImg.src = imageSrc;
         }
-
         function closeModal() {
             var modal = document.getElementById("imageModal");
             modal.style.display = "none";
